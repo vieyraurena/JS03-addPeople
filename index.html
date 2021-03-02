@@ -1,0 +1,44 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<sidebar>
+			<ul class="people__list"></ul>
+			<div class="sidebar__actions">
+				<button class="add-person__button">Add new person</button>
+			</div>
+		</sidebar>
+		<main>
+			<div class="people__content">
+			</div>
+			<div class="people-add">
+				<form action="">
+          <div class="field__group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="field__group">
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+          </div>
+          <div class="field__group">
+            <label for="phone">Phone</label>
+            <input type="phone" id="phone" />
+          </div>
+          <div class="field__group">
+            <label for="city">City</label>
+            <input type="text" id="city" />
+          </div>
+          <button type="submit">Submit</button>
+          <button type="reset" class="people-add__cancel">Cancel</button>
+				</form>
+			</div>
+		</main>
+		<div>
+    <script src="js/script.js"></script>
+</body>

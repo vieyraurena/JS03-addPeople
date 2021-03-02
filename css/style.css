@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+sidebar {
+  border-right: solid 1px lightgray;
+}
+
+.people__content {
+  margin: 0 1rem;
+  flex-grow: 1;
+}
+
+.people__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.people__list li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-bottom: solid 1px lightgray;
+}
+
+.people__list li button {
+  border: none;
+  margin: 0.25rem 0;
+  padding: 0.25rem;
+}
+
+.people__list h3 {
+  margin: 0;
+  flex: 1;
+  display: block;
+  padding: 1rem;
+}
+
+.people__list li.active h3 {
+  background-color: #d6efff;
+}
+
+.add-person__button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: solid 1px black;
+  display: block;
+  width: 100%;
+}
+
+.sidebar__actions {
+  padding: 1rem;
+}
+
+.people-add {
+  border-top: solid 1px lightgray;
+  padding: 1rem;
+  flex-shrink: 0;
+  transform: translateY(100%);
+  transition: transform 100ms ease-in;
+}
+
+.people-add.active {
+  transform: translateY(0);
+}
+
+.field__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.field__group label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
