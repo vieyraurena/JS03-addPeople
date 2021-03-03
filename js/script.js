@@ -22,6 +22,17 @@ cancelButton.addEventListener("click", (e) => {
   addForm.classList.remove("active");
 });
 
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  addInfo(
+    form.elements[0].value,
+    form.elements[1].value,
+    form.elements[2].value,
+    form.elements[3].value,
+  );
+  event.target.reset();
+});
+
 // FUNCIONES GLOBALES
 
 function getListElement(id) {
@@ -206,18 +217,3 @@ const addInfo = (fullName, email, phone, city) => {
     })
     alert('La persona fue agregada satisfactoriamente')
 };
-
-form.addEventListener('submit', event => {
-  event.preventDefault();
-  addInfo(
-    form.elements[0].value,
-    form.elements[1].value,
-    form.elements[2].value,
-    form.elements[3].value,
-  );
-
-  form.elements[0].value = '';
-  form.elements[1].value = '';
-  form.elements[2].value = '';
-  form.elements[3].value = '';
-})
